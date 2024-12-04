@@ -89,4 +89,53 @@ let yourName = "Athene Nefos"; //your name is now holding the the string "Athene
 let greeting = "Hello, my name is " + yourName;  // Concatenates the strings and stores it in the greeting variable
 
 //log the greeting to see the final result
-console.log(greeting);
+console.log(greeting); // Output: "Hello, my nam eis Athene Nefos"
+
+// Section c. Booleans
+
+/** Using the provided variable definitions, replace the blanks so that all log statements print true in the console. Answers should be all be valid JS syntax and not weird things that don't make sense but happen to print true to the console*/
+
+const a = 4;
+const b = 53;
+const c = 57;
+const d = 16;
+const e = 'Kevin';
+
+console.log(a < b);
+console.log(c > d);
+console.log('Name' === 'Name'); //Comparison operator that evaluates equality; check for strickly equality
+// FOR THE NEXT TWO, USE ONLY && OR ||
+console.log(true || false);  // "or" ooperator
+console.log(false || false || false || false || false || true);  // We use || because it only needs one true value to make the entire statement true.  && would make the statement false.
+console.log(false || !false)
+
+console.log(e === 'Kevin');  //Check for strick equality
+console.log(a + b === c); // Class note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
+console.log(a * a === d); // Class note: the answer is a simple arithmetic equation, not something "weird"
+console.log(48 == '48');  // USe the loose equality operator to compare 48 and '48'
+
+// Section D. The Farm 
+
+//Decalre Variable
+let animal = "cow";
+ animal = "dog"
+// Check 'if' the animal is a cow, using a 'if' statement, using strick equality operator.  
+if (animal === "cow") {
+   console.log("moooooo")
+} else {  // use else statement to handle situations where 'animal' is not a 'cow' 
+   console.log("Hey!  You are not a cow.");
+}
+
+// Section E. Driver's Ed
+/**Make a variable that holds a person's age; be semantic
+Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young." */
+
+// Step 1: Declare variable to hold the person's age
+let age = 16;
+
+//Step 2: Check the age using an "if-else' statement" . Age value can be change to test different cases.
+if (age >= 16) {
+   console.log("Here are the Keys!")
+} else {
+   console.log("Sorry, you're too young.");
+}
