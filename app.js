@@ -81,3 +81,12 @@ secondVariable = "This is a new string";  //secondVAriable is now holding the ne
 
 //Log the value of the firstVariable to check its value after changes
 console.log(firstVariable); // output should be 42
+
+// Step 5: create a variable called yourNAme and set it equal to your name as a string
+let yourName = "Athene Nefos"; //your name is now holding the the string "Athene Nefos"
+
+//Step 6: Concatenate "Hello, my name is " with yourName to create a greeting message
+let greeting = "Hello, my name is " + yourName;  // Concatenates the strings and stores it in the greeting variable
+
+//log the greeting to see the final result
+console.log(greeting);
