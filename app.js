@@ -531,3 +531,17 @@ function getTwoLengths(string1, string2) {
 
 console.log(getTwoLengths("Hank", "Hippopopalous"));
 
+// F. getMultipleLengths
+
+/** Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
+
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+=> [5, 4, 2, 2, 4]*/
+
+function getMultipleLengths(stringsArray) {
+   //use map method to create a new array of lengths. The .map() method iterates over each element in stringsArray and applies the function string => string.length. This function calculates the length of each string and returns a new array containing those lengths
+   return stringsArray.map(string => string.length);
+}
+
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
