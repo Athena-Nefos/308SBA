@@ -707,3 +707,117 @@ function oldAndLoud(person) {
 oldAndLoud(user);
 
 console.log(user);
+
+// Cat Combinators
+
+// 1. Mama cat
+
+ const cat1 = {
+   name: "Shadow",
+   breed: "house cat",
+   age: 5,
+ };
+
+ console.log(cat1.age);
+ console.log(cat1.breed);
+
+ // 2. Papa cat
+
+ const cat2 = {
+   name: "Tixi",
+   breed: "Long Hair",
+   age: 7,
+ };
+
+ //The next step demonstrates that finctions can take objects as arguments
+
+ // function combineCats(mama, papa) {
+ //   console.log("Mama Cat:", mama);
+ //   console.log("Papa Cat:", papa);
+ // }
+
+ //Pass cat1 and cat2 to the function above
+ // combineCats(cat1, cat2);
+
+
+ //3. The next step demonstrates that functions can take objects as arguments
+
+ function combineCats(mama, papa) {
+   console.log("Mama Cat:", mama);
+   console.log("Papa Cat:", papa);
+ }
+
+ //Pass cat2 and cat2 to the function above
+ combineCats(cat1, cat2);
+
+function combineCats(mama, papa) {
+   return {
+      name: mama.name + "-" + papa.name, //Concatenates the names
+      age: 1, //the age of the new cat is always 1
+      breed: mama.breed + "-" + papa.breed, //concatenate breed with hyphen
+   };
+} 
+
+console.log(combineCats(cat1, cat2));
+
+ // * you could also, You could also invoke the combineCats function by writing the objects straight into the parentheses instead of creating variables, like cat1 and cat2, example:
+
+ function combineCats(mama, papa) {
+   console.log("Mama:", mama);
+   console.log("Papa:", papa);
+ }
+ 
+ combineCats(
+   { name: "Craig", age: 20, breed: "unknown" },
+   { name: "Linda", age: 20, breed: "undefined" }
+ );
+
+// Make it so the combineCats function will return a combination of the two incoming cats. The result should be an object wherein the name is a concatenation of the parents' names, the age is 1, the breed is each of the parents' breeds with a hyphen in between.
+
+function combineCats(mama, papa) {
+   return {
+      name: mama.name + "-" + papa.name, //Concatenates the names
+      age: 1, //the age of the new cat is always 1
+      breed: mama.breed + "-" + papa.breed, //concatenate breed with hyphen
+   };
+} 
+
+console.log(combineCats(cat1, cat2));
+
+ // * you could also, You could also invoke the combineCats function by writing the objects straight into the parentheses instead of creating variables, like cat1 and cat2, example:
+
+ // function combineCats(mama, papa) {
+ //   console.log("Mama:", mama);
+ //   console.log("Papa:", papa);
+ // }
+ 
+ console.log(combineCats(
+   { name: "Craig", age: 20, breed: "unknown" },
+   { name: "Linda", age: 20, breed: "undefined" }
+ ));
+
+//Why Write Objects Directly? Convenience: If you only need those objects for a single function call and don’t plan to use them elsewhere, you can skip creating variables. Readability: It can sometimes make the code shorter and easier to understand when the objects are small and self-contained.
+
+
+//4. Cat Brain Bender
+
+/** If combineCats returns an object, and if combineCats takes objects as arguments, then it stands to reason that:
+
+catCombinator can use itself as its own argument.
+
+Take a second to stew on that . . .
+
+What is the result of:
+
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
+Whoa . . .
+
+The above console.log is two levels deep of combineCats.
+
+Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats. */
+
+//This is an excercise in recusion
+
+console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)), combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))));
+
+
