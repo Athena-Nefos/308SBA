@@ -517,3 +517,17 @@ console.log(isVowel('1'));
 console.log(isVowel(' '));
 console.log(isVowel('Y')); 
 
+// E. getTwoLengths
+
+/** Write a function getTwoLengthsthat accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+=> [4, 13] */
+
+function getTwoLengths(string1, string2) {
+   //Return an array containing the lengths of both strings
+   return [string1.length, string2.length];
+}
+
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
