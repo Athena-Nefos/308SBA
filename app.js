@@ -480,3 +480,40 @@ function printCool(name) {
    console.log(`${name} is super cool!`);
 }
 printCool("Athene"); // call the function
+
+// C.  calculateCube
+/** Write a function calculateCubethat takes a single number and prints the volume of a cube made from that number.
+
+console.log(calculateCube(5));
+=> 125 */
+
+function calculateCube(number) {
+   const volume = number ** 3; //calculate the cube using exponentiation
+   return volume;
+}
+
+console.log(calculateCube(5))
+
+//D. isVowel 
+/**Write a function isVowelthat takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want. */
+
+function isVowel(char) {
+   //Convert to lowercase for case-sensitive comparison
+   char = char.toLowerCase();
+
+   //array containing the vowels to check if character is one of the vowels, we will not include "y"
+   const vowels = ['a', 'e', 'i', 'o', 'u'];
+   return vowels.includes(char);
+}
+
+//Test function
+console.log(isVowel('a'));
+console.log(isVowel('E'));
+console.log(isVowel('i'));
+console.log(isVowel('O'));
+console.log(isVowel('u'));
+console.log(isVowel('b'));
+console.log(isVowel('1'));
+console.log(isVowel(' '));
+console.log(isVowel('Y')); 
+
